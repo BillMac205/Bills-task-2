@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheeet"href="style.css">
+</head>
+<body>
+    <header>
+        <h1>color customization</h1>
+        <label for="primarycolor">primary color:</label>
+        <input type="color" id="primary color" value="80">
+        <label for="secondarycolor">secondary color:</label>
+        <input type="color" id="secondarycolor" value="80">
+        </header>
+        <div class="container">
+            <h2>welcome to color customization demo</h2>
+            <p>this is a demo where you can customize the color scheme of a website or application</p>
+        
+        </div>
+        <script>
+            const primarycolorinput = document.getElementById('primarycolor');
+            const secondarycolorinput = document.getElementById('secondarycolor');
+            primarycolorinput.addEventListener('input',() => {
+                document.documentElement.style.setProperty('--primary-color',primarycolorinput.value);
+
+            } );
+
+            secondarycolorinput.addEventListener('input',() => {
+                document.documentElement.style.setProperty('--secondary-color', secondarycolorinput.value);
+            });
+            
+        </script>
+
+    
+</body>
+</html>
